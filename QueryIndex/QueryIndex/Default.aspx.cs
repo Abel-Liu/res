@@ -16,9 +16,9 @@ namespace QueryIndex
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            var strQuery = "Select DocTitle,Filename,Size,PATH,URL from Scope() where CONTAINS(Contents,'" + this.txtContent.Text + "')";
-            
-            string connstring = string.Format("Provider=\"MSIDXS\";Data Source=\"{0}\"", this.txtStorage.Text);
+            var strQuery = string.Format("Select DocTitle,Filename,Size,PATH from Scope() where CONTAINS(Contents,'{0}')", this.txtContent.Text);
+
+            string connstring = string.Format("Provider=MSIDXS.1;Integrated Security .='';Data Source={0}", this.txtStorage.Text);
 
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection(connstring);
             conn.Open();
@@ -31,8 +31,7 @@ namespace QueryIndex
             conn.Close();
 
             this.txtContent.Text = dt.Rows.Count.ToString();
-            DataView source = new DataView(dt);
-            grid.DataSource = source;
+            grid.DataSource = dt;
             grid.DataBind();
 
 
