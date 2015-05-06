@@ -16,6 +16,7 @@ namespace QueryIndex
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            var strQuery = "Select DocTitle,Filename,Size,PATH,URL from Scope() where CONTAINS(Contents,'" + this.txtContent.Text + "')";
             
             string connstring = string.Format("Provider=\"MSIDXS\";Data Source=\"{0}\"", this.txtStorage.Text);
 
