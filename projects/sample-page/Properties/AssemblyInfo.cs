@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过下列特性集
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("QueryIndex")]
+[assembly: AssemblyTitle("sample_page")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("QueryIndex")]
-[assembly: AssemblyCopyright("版权所有(C) Microsoft 2015")]
+[assembly: AssemblyCompany("Abel")]
+[assembly: AssemblyProduct("sample_page")]
+[assembly: AssemblyCopyright("版权所有(C) Abel 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("0e4fed50-13f1-46a9-aa64-3f56a5f6eba1")]
+[assembly: Guid("87dffd7a-a5b4-4259-89a7-553589b9dc06")]
 
 // 程序集的版本信息由下列四个值组成:
 //
