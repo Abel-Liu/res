@@ -15,6 +15,7 @@
             <asp:Button runat="server" ID="btnSearch" Text="Go" OnClick="btnSearch_Click" />
             <br />
             <br />
+            <asp:Label runat="server" ID="lab" Text=""></asp:Label>
             <asp:DataGrid runat="server" ID="grid"></asp:DataGrid>
         </div>
     </form>

@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.OleDb;
 
 namespace QueryIndex
 {
@@ -16,25 +17,24 @@ namespace QueryIndex
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            var strQuery = string.Format("Select DocTitle,Filename,Size,PATH from Scope() where CONTAINS(Contents,'{0}')", this.txtContent.Text);
+            string connectionString = "Provider=Search.CollatorDSO;Extended Properties=\"Application=Windows\"";
+            OleDbConnection connection = new OleDbConnection(connectionString);
 
-            string connstring = string.Format("Provider=MSIDXS.1;Integrated Security .='';Data Source={0}", this.txtStorage.Text);
+            string query = @"SELECT System.ItemName FROM SystemIndex WHERE FREETEXT('" + this.txtContent.Text + "')";
+            OleDbCommand cmd = new OleDbCommand(query, connection);
+            connection.Open();
 
-            System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection(connstring);
-            conn.Open();
+            var result = string.Empty;
 
-            System.Data.OleDb.OleDbDataAdapter cmd = new System.Data.OleDb.OleDbDataAdapter(strQuery, conn);
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                result += " - " + reader.GetString(0);
+            }
 
-            DataTable dt = new DataTable();
+            connection.Close();
 
-            cmd.Fill(dt);
-            conn.Close();
-
-            this.txtContent.Text = dt.Rows.Count.ToString();
-            grid.DataSource = dt;
-            grid.DataBind();
-
-
+            this.lab.Text = result;
         }
     }
 }
