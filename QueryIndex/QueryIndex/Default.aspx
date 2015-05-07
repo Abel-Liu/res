@@ -9,14 +9,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            Storage:<asp:TextBox runat="server" ID="txtStorage"></asp:TextBox>
-            <br />
             Contents:<asp:TextBox runat="server" ID="txtContent"></asp:TextBox>
             <asp:Button runat="server" ID="btnSearch" Text="Go" OnClick="btnSearch_Click" />
             <br />
             <br />
-            <asp:Label runat="server" ID="lab" Text=""></asp:Label>
-            <asp:DataGrid runat="server" ID="grid"></asp:DataGrid>
+            <asp:TextBox TextMode="MultiLine" runat="server" ID="txtResult" ReadOnly="true" Rows="8" Width="500"></asp:TextBox>
         </div>
     </form>
 </body>

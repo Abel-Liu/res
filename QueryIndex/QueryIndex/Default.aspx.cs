@@ -20,21 +20,21 @@ namespace QueryIndex
             string connectionString = "Provider=Search.CollatorDSO;Extended Properties=\"Application=Windows\"";
             OleDbConnection connection = new OleDbConnection(connectionString);
 
-            string query = @"SELECT System.ItemName FROM SystemIndex WHERE FREETEXT('" + this.txtContent.Text + "')";
+            string query = @"SELECT System.ItemPathDisplay FROM SystemIndex WHERE FREETEXT('" + this.txtContent.Text + "')";
             OleDbCommand cmd = new OleDbCommand(query, connection);
             connection.Open();
 
-            var result = string.Empty;
+            List<string> result = new List<string>();
 
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                result += " - " + reader.GetString(0);
+                result.Add(reader.GetString(0));
             }
 
             connection.Close();
 
-            this.lab.Text = result;
+            this.txtResult.Text = string.Join("\r\n", result.ToArray());
         }
     }
 }
