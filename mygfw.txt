@@ -1,7 +1,29 @@
 
 !custom config
-!last update: 2019-03-03
+!last update: 2019-08-05
 
+||percona.com
+||jboss.org
+||btsow.*
+||vagrantup.com
+||akamaihd.net
+||flightgear.org
+||wireguard.com
+||kccdk.com
+||arukas.io
+||jsczc.com
+||awsstatic.com
+||masuit.com
+||mega.nz
+||sencha.com
+||kansea.com
+||du.edu
+||katacoda.com
+||jimmysong.io
+||googleapis.com
+||bmw-carsharing.de
+||ibm.com
+||bmw-fleet.net
 ||seafile.com
 ||shousibaocai.net
 ||o-sky.com
