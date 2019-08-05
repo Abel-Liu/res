@@ -18,7 +18,6 @@
 ||noonpacific.com
 ||name.com
 ||fk-av.com
-||btkitty.com
 ||iav19.com
 ||imgtaxi.com
 ||imgflare.com
@@ -52,7 +51,6 @@
 ||componentone.com
 ||cloudfront.net
 ||211.142.133.226
-||btkitty.biz
 ||waqiangjiao.org
 ||tumblrget.com
 ||hostus.us
@@ -144,7 +142,7 @@
 ||hiformance.com
 ||googlevideo.com
 ||xixitalk.*
-||cnbtkitty.*
+||*btkitty*
 ||tunnello.com
 ||classicshell.net
 ||pnzhost.com
