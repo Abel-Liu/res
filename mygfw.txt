@@ -1,7 +1,8 @@
 
 !custom config
-!last update: 2019-08-05
+!last update: 2020-06-01
 
+||www.igdb.com
 ||vitess.io
 ||jdbimgs.com
 ||javdb.com
