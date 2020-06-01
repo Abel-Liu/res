@@ -2,6 +2,18 @@
 !custom config
 !last update: 2019-08-05
 
+||vitess.io
+||jdbimgs.com
+||javdb.com
+||tampermonkey.net
+||savido.net
+||trojan-tutor.github.io
+||googletagmanager.com
+||gstatic.com
+||yandex.ru
+||deviantart.com
+||tiktok.com
+||appspot.com
 ||percona.com
 ||jboss.org
 ||btsow.*
